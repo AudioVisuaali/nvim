@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
   vim.cmd('colorscheme rose-pine')
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
   use('mbbill/undotree')
+  use('github/copilot.vim')
   use {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v2.x',
@@ -36,6 +37,16 @@ return require('packer').startup(function(use)
       {'hrsh7th/nvim-cmp'},     -- Required
       {'hrsh7th/cmp-nvim-lsp'}, -- Required
       {'L3MON4D3/LuaSnip'},     -- Required
+
+      -- prettier format
+      { 'jose-elias-alvarez/null-ls.nvim' },
+      { 'MunifTanjim/prettier.nvim' },
     }
+  }
+
+  use("eandrju/cellular-automaton.nvim")
+  use {
+   'nvim-lualine/lualine.nvim',
+   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 end)
