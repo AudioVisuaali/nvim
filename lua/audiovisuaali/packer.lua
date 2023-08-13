@@ -49,4 +49,27 @@ return require('packer').startup(function(use)
    'nvim-lualine/lualine.nvim',
    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+
+  use {
+	  "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup() end
+  }
+
+  use {
+    'windwp/nvim-ts-autotag',
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = function() require('nvim-ts-autotag').setup() end
+  }
+
+  use('iamcco/markdown-preview.nvim')
+  use('AndrewRadev/tagalong.vim')
+
+  use {
+    'weilbith/nvim-code-action-menu',
+    cmd = 'CodeActionMenu',
+  }
+
+  use('nvim-tree/nvim-web-devicons')
+
+  use('alec-gibson/nvim-tetris')
 end)

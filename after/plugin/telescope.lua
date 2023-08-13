@@ -1,4 +1,17 @@
 local builtin = require('telescope.builtin')
+local telescope = require('telescope')
+
+telescope.setup {
+  defaults = {
+    mappings = {
+      i = {
+        ["<esc>"] = require('telescope.actions').close,
+        ["<C-BS>"] = require('telescope.actions').delete_buffer
+      },
+    },
+  },
+}
+
 
 local config = {
   sorting_strategy = "ascending",
