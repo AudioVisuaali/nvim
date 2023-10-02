@@ -1,1 +1,2 @@
-require("audiovisuaali")
+require("audiovisuaali.core")
+require("audiovisuaali.lazy")

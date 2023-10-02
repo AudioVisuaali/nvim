@@ -1,8 +1,18 @@
-require'nvim-web-devicons'.setup {
+return {
+"nvim-tree/nvim-web-devicons",
+  config = function()
+    require("nvim-web-devicons").setup({
+
  -- your personnal icons can go here (to override)
  -- you can specify color or cterm_color instead of specifying both of them
  -- DevIcon will be appended to `name`
  override = {
+   gql = {
+        icon = "",
+        color = "#e535ab",
+        cterm_color = "199",
+        name = "GraphQL",
+      },
   zsh = {
     icon = "",
     color = "#428850",
@@ -39,5 +49,6 @@ require'nvim-web-devicons'.setup {
     name = "Log"
   }
  };
+    })
+  end,
 }
-
