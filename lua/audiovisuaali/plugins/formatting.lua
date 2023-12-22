@@ -2,7 +2,6 @@
 local function file_exists_in_current_directory(filename)
 	local current_directory = vim.fn.getcwd()
 	local file_path = current_directory .. "/" .. filename
-	print(current_directory)
 
 	local f = io.open(file_path, "r")
 	if f ~= nil then
