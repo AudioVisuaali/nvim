@@ -7,6 +7,7 @@ return {
 		-- recommended settings from nvim-tree documentation
 		vim.g.loaded_netrw = 1
 		vim.g.loaded_netrwPlugin = 1
+		vim.g.nvim_tree_auto_open = 0
 
 		-- change color for arrows in tree to light blue
 		vim.cmd([[ highlight NvimTreeFolderArrowClosed guifg=#3FC5FF ]])
@@ -15,7 +16,8 @@ return {
 		-- configure nvim-tree
 		nvimtree.setup({
 			view = {
-				width = 37,
+				side = "right",
+				width = 52,
 				relativenumber = false,
 			},
 			update_focused_file = {
@@ -24,10 +26,14 @@ return {
 			},
 			-- change folder arrow icons
 			renderer = {
+				highlight_git = true,
 				indent_markers = {
-					enable = true,
+					enable = false,
 				},
 				icons = {
+					show = {
+						git = false,
+					},
 					glyphs = {
 						folder = {
 							arrow_closed = "", -- arrow when folder is closed
@@ -41,13 +47,17 @@ return {
 			-- window splits
 			actions = {
 				open_file = {
+					quit_on_open = true,
 					window_picker = {
 						enable = false,
 					},
 				},
 			},
 			filters = {
-				custom = { ".DS_Store" },
+				dotfiles = false,
+				git_clean = false,
+				no_buffer = false,
+				custom = { "node_modules", ".DS_Store" },
 			},
 			git = {
 				ignore = false,

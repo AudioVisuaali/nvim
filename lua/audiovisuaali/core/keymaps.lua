@@ -33,11 +33,8 @@ vim.keymap.set("n", "<leader>yw", '"+yiw')
 vim.api.nvim_set_keymap("n", "<C-d>", "10jzz", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-u>", "10kzz", { noremap = true })
 
--- Next error
-vim.api.nvim_set_keymap("n", "ö", "[d", { noremap = true, silent = true })
-
--- Previous error
-vim.api.nvim_set_keymap("n", "ä", "]d", { noremap = true, silent = true })
+-- Toggle numbers
+vim.keymap.set("n", "<leader>ln", ":set relativenumber! nu!<CR>", { noremap = true, silent = true })
 
 -- Disable basic navigation
 vim.api.nvim_set_keymap("n", "<Up>", "<NOP>", { noremap = true, silent = true })
