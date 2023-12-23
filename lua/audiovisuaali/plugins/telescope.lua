@@ -9,7 +9,6 @@ return {
 	keys = {
 		{
 			";;",
-
 			function()
 				local builtin = require("telescope.builtin")
 				builtin.resume()

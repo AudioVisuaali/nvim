@@ -7,18 +7,14 @@ return {
 		-- set keymaps
 		local keymap = vim.keymap -- for conciseness
 
-		keymap.set(
-			"n",
-			"<leader>hm",
-			':lua require("harpoon.ui").toggle_quick_menu()<cr>',
-			{ desc = "Mark file with harpoon" }
-		)
-		keymap.set(
-			"n",
-			"<leader>ha",
-			"<cmd>lua require('harpoon.mark').add_file()<cr>",
-			{ desc = "Mark file with harpoon" }
-		)
+		keymap.set("n", "<leader>hm", function()
+			require("harpoon.ui").toggle_quick_menu()
+		end, { desc = "Mark file with harpoon" })
+
+		keymap.set("n", "<leader>ha<cr>", function()
+			require("harpoon.mark").add_file()
+		end, { desc = "Mark file with harpoon" })
+
 		keymap.set("n", "<leader>h1", ':lua require("harpoon.ui").nav_file(1)<cr>', { desc = "Mark file with harpoon" })
 		keymap.set("n", "<leader>h2", ':lua require("harpoon.ui").nav_file(2)<cr>', { desc = "Mark file with harpoon" })
 		keymap.set("n", "<leader>h3", ':lua require("harpoon.ui").nav_file(3)<cr>', { desc = "Mark file with harpoon" })

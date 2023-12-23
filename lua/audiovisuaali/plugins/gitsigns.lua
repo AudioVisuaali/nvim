@@ -1,10 +1,9 @@
 return {
 	"lewis6991/gitsigns.nvim",
-	enabled = false,
 	event = { "BufReadPre", "BufNewFile" },
 	keys = {
 		{
-			"<leader>gd",
+			"<leader>gf",
 			function()
 				vim.cmd("Gitsigns toggle_linehl")
 				vim.cmd("Gitsigns toggle_signs")
