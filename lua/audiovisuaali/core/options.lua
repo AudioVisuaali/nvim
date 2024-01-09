@@ -2,6 +2,7 @@ vim.wo.number = false
 vim.wo.relativenumber = false
 vim.wo.wrap = false
 
+vim.opt.termguicolors = true
 vim.opt.splitright = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2

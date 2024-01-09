@@ -81,12 +81,13 @@ return {
 
 		telescope.setup({
 			pickers = {
+				respect_gitignore = false,
 				find_files = {
 					find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
 				},
 			},
 			defaults = {
-				file_ignore_patterns = { ".next", ".git/", "node_modules/" },
+				file_ignore_patterns = { ".next", ".git/", "node_modules/", "build", "dist" },
 				hidden = true,
 				respect_gitignore = false,
 				sorting_strategy = "ascending",
