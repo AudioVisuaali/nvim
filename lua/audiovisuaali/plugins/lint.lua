@@ -29,6 +29,7 @@ return {
 			javascriptreact = js_formatter,
 			typescriptreact = js_formatter,
 			python = { "pylint" },
+			terraform = { "tflint" },
 		}
 
 		vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave", "TextChanged" }, {

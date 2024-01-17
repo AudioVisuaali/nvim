@@ -119,6 +119,12 @@ return {
 			on_attach = on_attach,
 		})
 
+		lspconfig["terraformls"].setup({
+			-- configure prisma orm server
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
 		lspconfig["prismals"].setup({
 			-- configure prisma orm server
 			capabilities = capabilities,

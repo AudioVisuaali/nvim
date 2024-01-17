@@ -33,6 +33,7 @@ return {
 				markdown = { "prettier" },
 				graphql = { "prettier" },
 				lua = { "stylua" },
+				terraform = { "tflint" },
 				python = { "isort", "black" },
 			},
 			format_on_save = {
