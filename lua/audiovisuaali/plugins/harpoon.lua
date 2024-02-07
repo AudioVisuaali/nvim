@@ -11,7 +11,7 @@ return {
 			require("harpoon.ui").toggle_quick_menu()
 		end, { desc = "Mark file with harpoon" })
 
-		keymap.set("n", "<leader>ha<cr>", function()
+		keymap.set("n", "<leader>ha", function()
 			require("harpoon.mark").add_file()
 		end, { desc = "Mark file with harpoon" })
 
